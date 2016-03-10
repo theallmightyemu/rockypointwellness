@@ -1,0 +1,19 @@
+
+#redirects
+redirect 302 /what-is-chinese-medicine/acupuncture /ourMedicine.html
+redirect 302 /what-is-chinese-medicine/chinese-herbal-medicine /ourMedicine.html
+redirect 302 /what-is-chinese-medicine/ /ourMedicine.html
+redirect 302 /conditions-treated/ /ourMedicine.html
+redirect 302 /author/eraneven/ /eran.html
+redirect 302 /about-us-2/eraneven/ /eran.html?
+redirect 302 /faq/ /ourMedicine.html
+redirect 302 /contact/ /contactUs.html
+redirect 302 /media/ /community.html
+redirect 302 /links/ /resources.html
+redirect 302 /about-us-2/ /aboutUs.html
+redirect 302 /about-us/ /aboutUs.html
+redirect 302 /fees-services/ https://rockypointwellness.janeapp.com
+redirect 302 www.rockypointwellness.com http://rockypointwellness.com
+
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html

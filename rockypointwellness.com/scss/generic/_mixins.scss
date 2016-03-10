@@ -1,0 +1,29 @@
+@mixin rounded($radius: 10px) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+@mixin box-shadow($horizontal:1px, $vertical:1px, $blur:2px, $spread:1px, $color:rgba(0,0,0,0.3)) {
+	-moz-box-shadow:    $horizontal $vertical $blur $spread $color;
+	-webkit-box-shadow: $horizontal $vertical $blur $spread $color;
+	box-shadow:         $horizontal $vertical $blur $spread $color;
+}
+@mixin inset-box-shadow($horizontal:1px, $vertical:1px, $blur:2px, $spread:1px, $color:rgba(0,0,0,0.3)) {
+	-moz-box-shadow:    $horizontal $vertical $blur $spread $color inset;
+	-webkit-box-shadow: $horizontal $vertical $blur $spread $color inset;
+	box-shadow:         $horizontal $vertical $blur $spread $color inset;
+}
+
+@mixin transition($speed: 0.3s, $easing: ease-in-out, $type: all) {
+	-webkit-transition: $type $speed $easing;
+	-moz-transition: $type $speed $easing;
+	-o-transition: $type $speed $easing;
+	transition: $type $speed $easing;
+}
+
+@mixin gradient($to: $darkColor, $from: rgba(#fff, 0)) {
+	background-image: -webkit-linear-gradient(top, $from, $to);
+	background-image: -moz-linear-gradient(top, $from, $to);
+	background-image: -o-linear-gradient(top, $from, $to);
+	background-image: linear-gradient(to bottom, $from, $to);
+}

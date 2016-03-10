@@ -1,0 +1,4 @@
+
+#redirects
+RewriteEngine on
+RewriteRule ^(.*)$ http://rockypointwellness.com/$1 [R=301,L]

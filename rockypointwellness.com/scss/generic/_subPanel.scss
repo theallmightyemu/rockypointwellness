@@ -1,0 +1,96 @@
+.subPanel {
+	position: relative;
+	display: block;
+	width: $panelWidth * 0.25;
+	background: $lightColor;
+	float: left;
+
+	.callToAction {
+		display: none;
+		float: left;
+	}
+	.company {
+		display: none;
+		color: $darkColor;
+		_text-shadow:
+			-1px -1px 0 $darkColor,
+			1px -1px 0 $darkColor,
+			-1px 1px 0 $darkColor,
+			1px 1px 0 $darkColor;
+		font-weight: bold;
+		margin: -$spacing $spacing 0;
+		text-align: left;
+		position: relative;
+		text-transform: uppercase;
+		left: 0px;
+		font-size: 35px;
+
+		b {
+			font-size: 110%;
+		}
+		span {
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 80%;
+			b {
+				font-size: inherit;
+			}
+		}
+	}
+	.logo {
+		margin: 5%;
+		width: 90%;
+		height: auto;
+
+		a {
+			position: relative;
+			display:block;
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+			span {
+				margin-left: -10000px;
+			}
+		}
+	}
+	.contact {
+		margin: $spacing;
+		width: 90%;
+		height: 200px;
+		padding-top: $spacing * 3;
+		color: $darkColor;
+		font-weight: bold;
+		font-size: 20px;
+		text-transform: uppercase;
+
+		a {
+			@include transition(0.2s);
+			@include rounded();
+			@include box-shadow();
+			text-decoration: none;
+			padding: 5px 60px;
+			margin: $spacing 0;
+			background: white;
+			border: 1px solid $darkColor;
+			color: $darkColor;
+			opacity: 1;
+			font-size: 120%;
+
+			&:hover {
+				background: $accentColor;
+				color: white;
+			}
+		}
+	}
+	&:before {
+		height: 100%;
+		content: '';
+		display: block;
+		border-right: $accentColor 5px solid;
+		position: absolute;
+		right: 0px;
+		top: 0;
+	}
+}

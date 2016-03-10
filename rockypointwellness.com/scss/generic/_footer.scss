@@ -1,0 +1,52 @@
+.footer {
+	$height: 50px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	padding-bottom: $spacing/2;
+	padding-right: $spacing/2;
+	width: 100%;
+	height: $height;
+	background: none;
+
+	a {
+		display: block;
+		background: $accentColor;
+		margin-right: $spacing/2;
+		@include transition(0.2s);
+		@include rounded($height);
+		@include box-shadow();
+		position: relative;
+		opacity: 0.7;
+		cursor: pointer;
+		float: right;
+		height: $height;
+		width: $height;
+
+		&:hover {
+			opacity: 1;
+		}
+		&.facebook {
+			img {
+				width: 15px;
+			}
+		}
+		&.twitter {
+			img {
+				margin-top: 13px;
+				width: 30px;
+			}
+		}
+		&.instagram {
+			img {
+				margin-top: 10px;
+				width: 30px;
+			}
+		}
+		img {
+			display: block;
+			margin: 10px auto;
+
+		}
+	}
+}
