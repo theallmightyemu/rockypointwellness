@@ -75,6 +75,23 @@ td {
   font-weight: normal;
   src: url("fonts/begum-reg.eot");
   src: url("fonts/begum-reg.eot?") format("eot"), url("fonts/begum-reg.woff") format("woff"), url("fonts/begum-reg.ttf") format("truetype"), url("fonts/begum-reg.svg#font-name") format("svg"); }
+#mc_embed_signup {
+  clear: left;
+  margin: 0 20px; }
+
+#mce-EMAIL {
+  margin: 10px 0;
+  width: 190px;
+  font-size: 12px; }
+
+#mc-embedded-subscribe {
+  width: 190px;
+  font-size: 12px;
+  background: white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px; }
+
 body {
   font-family: 'PT Serif', serif;
   font-size: 16px; }

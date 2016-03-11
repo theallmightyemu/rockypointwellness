@@ -1,0 +1,15 @@
+#mc_embed_signup {
+	clear:left;
+	margin:0 20px;
+}
+#mce-EMAIL{
+	margin:10px 0;
+	width:190px;
+	font-size:12px;
+}
+#mc-embedded-subscribe{
+	width:190px;
+	font-size:12px;
+	background: white;
+	@include rounded();
+}
