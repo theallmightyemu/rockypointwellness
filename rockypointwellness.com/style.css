@@ -92,6 +92,9 @@ td {
   -moz-border-radius: 10px;
   border-radius: 10px; }
 
+/*
+for mobile images: <img src="small.jpg" srcset="medium.jpg 1000w, large.jpg 2000w" alt="yah">
+*/
 body {
   font-family: 'PT Serif', serif;
   font-size: 16px; }
