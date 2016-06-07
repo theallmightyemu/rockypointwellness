@@ -1,7 +1,7 @@
 @import "generic/base.scss";
 @import "generic/vars.scss";
 @import "generic/mixins.scss";
-@import "generic/newsletter.scss";
+@import "components/newsletter.scss";
 
 /*
 for mobile images: <img src="small.jpg" srcset="medium.jpg 1000w, large.jpg 2000w" alt="yah">
@@ -17,7 +17,7 @@ font-family: 'PT Serif', serif;
    		$panelWidth: 1200px;
 		width: $panelWidth;
 
-		@import "generic/subPanel.scss";
+		@import "components/subPanel.scss";
 
 		.mainPanel {
 			width: $panelWidth * 0.75;
@@ -268,5 +268,5 @@ font-family: 'PT Serif', serif;
 			}
 		}
 	}
-	@import "generic/footer.scss";
+	@import "components/footer.scss";
 }
