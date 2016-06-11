@@ -1,9 +1,142 @@
 .subPanel {
+	position: fixed;
+	display: block;
+	width: $panelWidth;
+	height: $menuHeight;
+	background: $lightColor;
+	float: left;
+	z-index: 80;
+	border-bottom: $accentColor 0.2rem solid;
+
+	.callToAction {
+		display: none;
+		float: left;
+	}
+	#mc_embed_signup {
+		display: none;
+	}
+	.company {
+		display: none;
+		color: $darkColor;
+		_text-shadow:
+			-1px -1px 0 $darkColor,
+			1px -1px 0 $darkColor,
+			-1px 1px 0 $darkColor,
+			1px 1px 0 $darkColor;
+		font-weight: bold;
+		margin: -$spacing $spacing 0;
+		text-align: left;
+		position: relative;
+		text-transform: uppercase;
+		left: 0px;
+		font-size: 0.2rem;
+
+		b {
+			font-size: 110%;
+		}
+		span {
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 80%;
+			b {
+				font-size: inherit;
+			}
+		}
+	}
+	.logo {
+		width: auto;
+		height: 100%;
+		float: left;
+
+		a {
+			position: relative;
+			display:block;
+			left: 0.3rem;
+			top: 0.3rem;
+
+			img {
+				width: auto;
+				height: 80%;
+			}
+			span {
+				position: absolute;
+				margin-left: -10000px;
+			}
+		}
+	}
+	.contact {
+		margin: 0;
+		position: relative;
+		float: left;
+		left: 1rem;
+		top: -1.7rem;
+		width: auto;
+		height: 1rem;
+		padding-top: 0;
+		color: $darkColor;
+		font-weight: bold;
+		font-size: 0.7rem;
+
+		a {
+			@include transition(0.2s);
+			@include rounded();
+			@include box-shadow();
+			text-decoration: none;
+			padding: 0.1rem 0.5rem;
+			margin: $spacing 0;
+			background: white;
+			position: relative;
+			left: 5.2rem;
+			top: 3rem;
+			border: 1px solid $darkColor;
+			color: $darkColor;
+			opacity: 1;
+			font-size: 150%;
+
+			&:hover {
+				background: $accentColor;
+				color: white;
+			}
+		}
+	}
+	.showMenu {
+		position: absolute;
+		right: 0.5rem;
+		top: 0.4rem
+	}
+	&:before {
+		height: 100%;
+		content: '';
+		display: block;
+		border-right: $accentColor 4.2rem solid;
+		position: absolute;
+		right: 0px;
+		top: 0;
+	}
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+
+.subPanel {
 	position: relative;
 	display: block;
 	width: $panelWidth * 0.25;
 	background: $lightColor;
 	float: left;
+	border-bottom: $accentColor 0 solid;
 
 	.callToAction {
 		display: none;
@@ -45,6 +178,7 @@
 		a {
 			position: relative;
 			display:block;
+			margin-left: -10px;
 
 			img {
 				width: 100%;
@@ -63,6 +197,7 @@
 		color: $darkColor;
 		font-weight: bold;
 		font-size: 20px;
+		left: 0;
 		text-transform: uppercase;
 
 		a {
@@ -77,12 +212,18 @@
 			color: $darkColor;
 			opacity: 1;
 			font-size: 120%;
+			position: relative;
+			left: 0;
+			top: 0;
 
 			&:hover {
 				background: $accentColor;
 				color: white;
 			}
 		}
+	}
+	.showMenu {
+		display: none;
 	}
 	&:before {
 		height: 100%;
@@ -93,4 +234,5 @@
 		right: 0px;
 		top: 0;
 	}
+}
 }

@@ -6,16 +6,302 @@
 /*
 for mobile images: <img src="small.jpg" srcset="medium.jpg 1000w, large.jpg 2000w" alt="yah">
 */
-
 body {
 	font-family: 'PT Serif', serif;
-	font-size: 16px;
+	font-size: 62.5%;
+
+	.panelWrapper {
+		display: block;
+   		margin: 0 auto;
+   		font-size: 1.2rem;
+		$panelWidth: 100%;
+		width: $panelWidth;
+
+		@import "components/subPanel.scss";
+
+		.mainPanel {
+			width: $panelWidth;
+			margin-top: $menuHeight;
+			float: left;
+			min-height: 100%;
+			height: auto;
+			@include box-shadow(-$panelWidth * 0.25 , 0, 0, 0, $lightColor);
+
+			.line {
+				min-height: 100%;
+				height: auto;
+				@include box-shadow(-5px , 0, 0, 0, $accentColor);
+
+				.menu {
+					width: 100%;
+					font-size: 1rem;
+					padding: 0 0 $spacing;
+					background: $accentColor;
+					display: none;
+					position: fixed;
+					z-index: 70;
+
+					a {
+						@include rounded();
+						color: $darkColor;
+						padding: $spacing/3 0;
+						width: $spacing*5;
+						text-decoration: none;
+						font-weight: bold;
+						float: left;
+						background: white;
+						text-align: center;
+						border: 1px solid $darkColor;
+						margin: $spacing 0 0 $spacing;
+
+						&:nth-child(even) {
+							margin: $spacing $spacing 0 0;
+							float: right;
+						}
+						&:hover {
+							@include box-shadow();
+							color: white !important;
+							background-color: $accentColor;
+						}
+						&.active {
+							color: lighten($darkColor, 30%);
+						}
+					}
+				}
+				.content {
+					padding: $spacing;
+					line-height: 2rem;
+					height: auto;
+					position: relative;
+
+					a {
+						color: lighten($darkColor, 20%);
+						@include transition();
+						text-decoration: none;
+						img {
+							&.center {
+								position: relative;
+								left: 50%;
+							}
+						}
+						&:hover {
+							color: lighten($darkColor, 40%);
+						}
+					}
+					hr {
+						border: 0;
+						border-top: 0.2rem solid $accentColor;
+					}
+					h3 {
+						font-size: 120%;
+						position: relative;
+
+						.bookNow {
+							margin: 0.5rem;
+							right: 0;
+							bottom: 0;
+							color: $darkColor;
+							font-weight: bold;
+							font-size: 1.2rem;
+							text-transform: uppercase;
+
+							a {
+								@include transition(0.2s);
+								@include rounded();
+								@include box-shadow();
+								text-decoration: none;
+								padding: 0.5rem;
+								background: white;
+								border: 1px solid $darkColor;
+								color: $darkColor;
+								opacity: 1;
+
+								&:hover {
+									background: $accentColor;
+									color: white;
+								}
+							}
+
+						}
+					}
+					ul {
+						li {
+							margin-left: $spacing;
+						}
+					}
+					.map {
+						position: relative;
+						top: -15rem;
+					}
+					.column {
+						display: inline-table;
+						width: 100%;
+					}
+					.image {
+						@include rounded($spacing);
+						@include box-shadow();
+						$height: auto;
+						overflow: hidden;
+						height: auto;
+						width: 30%;
+						margin: $spacing 0;
+						position: relative;
+
+						&:after {
+							display: block;
+							width: 100%;
+							height: 20%;
+							position: absolute;
+							bottom: 0;
+							opacity: 0.6;
+							left: 0;
+							content: ' ';
+							@include gradient();
+						}
+
+						&.profile {
+							width: 50%;
+							float: left;
+						}
+						&.large {
+							width: 100%;
+						}
+						&.map {
+							width: 100%;
+							height: 40rem;
+
+							&:after {
+								display: none;
+							}
+						}
+						img {
+							height: auto;
+							width: 100%;
+
+						}
+						span {
+							display: block;
+							width: 100%;
+							position: absolute;
+							bottom: 2%;
+							text-align: center;
+							line-height: 1.6rem;
+							font-weight: bold;
+							text-transform: uppercase;
+							color: white;
+							z-index: 2;
+						}
+					}
+					.heroPic {
+						padding-bottom: $spacing;
+						width: 100%;
+
+						img {
+							@include rounded($spacing);
+							@include box-shadow();
+							margin: 10px auto 0;
+							width: 100%;
+						}
+					}
+					.question {
+						color: lighten($darkColor, 20%);
+						cursor: pointer;
+						@include transition();
+
+						&:hover {
+							color: lighten($darkColor, 40%);
+						}
+						.answer {
+							display: none;
+							color: $darkColor;
+
+							&:hover {
+								color: $darkColor;
+							}
+						}
+					}
+					.socialPanel {
+						$height: 50px;
+						height: $height;
+						width: auto;
+
+						a {
+							display: block;
+							margin: $spacing/2;
+							@include transition(0.2s);
+							@include rounded($height);
+							@include box-shadow();
+							position: relative;
+							opacity: 0.7;
+							cursor: pointer;
+							float: left;
+							height: $height;
+							width: $height;
+
+							&:hover {
+								opacity: 1;
+							}
+							&.facebook {
+								background: #46629D;
+
+								img {
+									width: 15px;
+								}
+							}
+							&.twitter {
+								background: #55ACEE;
+
+								img {
+									margin-top: 13px;
+									width: 30px;
+								}
+							}
+							&.instagram {
+								background: #9b6954;
+
+								img {
+									margin-top: 10px;
+									width: 30px;
+								}
+							}
+							img {
+								display: block;
+								margin: 10px auto;
+
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@import "components/footer.scss";
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+body {
+	font-family: 'PT Serif', serif;
+	font-size: 62.5%;
 
 	.panelWrapper {
 		display: block;
    		margin: 0 auto;
    		$panelWidth: 1200px;
 		width: $panelWidth;
+		font-size: 1.4rem;
 
 		@import "components/subPanel.scss";
 
@@ -32,9 +318,11 @@ body {
 				@include box-shadow(-5px , 0, 0, 0, $accentColor);
 
 				.menu {
+					@include transition(0.2s);
 					width: 100%;
 					padding: $spacing 0 0 $spacing;
 					background: white;
+					display: block;
 
 					a {
 						@include rounded();
@@ -269,4 +557,5 @@ body {
 		}
 	}
 	@import "components/footer.scss";
+}
 }

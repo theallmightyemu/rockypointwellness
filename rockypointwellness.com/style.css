@@ -60,7 +60,6 @@ td {
   padding: 0;
   border: 0;
   outline: 0;
-  font-size: 100%;
   vertical-align: baseline; }
 
 @font-face {
@@ -97,31 +96,42 @@ for mobile images: <img src="small.jpg" srcset="medium.jpg 1000w, large.jpg 2000
 */
 body {
   font-family: 'PT Serif', serif;
-  font-size: 16px; }
+  font-size: 62.5%; }
   body .panelWrapper {
     display: block;
     margin: 0 auto;
-    width: 1200px; }
+    font-size: 1.2rem;
+    width: 100%;
+    /* Larger than mobile */
+    /* Larger than phablet */
+    /* Larger than tablet */
+    /* Larger than desktop */
+    /* Larger than Desktop HD */ }
     body .panelWrapper .subPanel {
-      position: relative;
+      position: fixed;
       display: block;
-      width: 300px;
+      width: 100%;
+      height: 4rem;
       background: #ccc;
-      float: left; }
+      float: left;
+      z-index: 80;
+      border-bottom: #b3e1e2 0.2rem solid; }
       body .panelWrapper .subPanel .callToAction {
         display: none;
         float: left; }
+      body .panelWrapper .subPanel #mc_embed_signup {
+        display: none; }
       body .panelWrapper .subPanel .company {
         display: none;
         color: #052B48;
         _text-shadow: -1px -1px 0 #052B48, 1px -1px 0 #052B48, -1px 1px 0 #052B48, 1px 1px 0 #052B48;
         font-weight: bold;
-        margin: -20px 20px 0;
+        margin: -1.5rem 1.5rem 0;
         text-align: left;
         position: relative;
         text-transform: uppercase;
         left: 0px;
-        font-size: 35px; }
+        font-size: 0.2rem; }
         body .panelWrapper .subPanel .company b {
           font-size: 110%; }
         body .panelWrapper .subPanel .company span {
@@ -131,26 +141,32 @@ body {
           body .panelWrapper .subPanel .company span b {
             font-size: inherit; }
       body .panelWrapper .subPanel .logo {
-        margin: 5%;
-        width: 90%;
-        height: auto; }
+        width: auto;
+        height: 100%;
+        float: left; }
         body .panelWrapper .subPanel .logo a {
           position: relative;
-          display: block; }
+          display: block;
+          left: 0.3rem;
+          top: 0.3rem; }
           body .panelWrapper .subPanel .logo a img {
-            width: 100%;
-            height: auto; }
+            width: auto;
+            height: 80%; }
           body .panelWrapper .subPanel .logo a span {
+            position: absolute;
             margin-left: -10000px; }
       body .panelWrapper .subPanel .contact {
-        margin: 20px;
-        width: 90%;
-        height: 200px;
-        padding-top: 60px;
+        margin: 0;
+        position: relative;
+        float: left;
+        left: 1rem;
+        top: -1.7rem;
+        width: auto;
+        height: 1rem;
+        padding-top: 0;
         color: #052B48;
         font-weight: bold;
-        font-size: 20px;
-        text-transform: uppercase; }
+        font-size: 0.7rem; }
         body .panelWrapper .subPanel .contact a {
           -webkit-transition: all 0.2s ease-in-out;
           -moz-transition: all 0.2s ease-in-out;
@@ -163,32 +179,128 @@ body {
           -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
           text-decoration: none;
-          padding: 5px 60px;
-          margin: 20px 0;
+          padding: 0.1rem 0.5rem;
+          margin: 1.5rem 0;
           background: white;
+          position: relative;
+          left: 5.2rem;
+          top: 3rem;
           border: 1px solid #052B48;
           color: #052B48;
           opacity: 1;
-          font-size: 120%; }
+          font-size: 150%; }
           body .panelWrapper .subPanel .contact a:hover {
             background: #b3e1e2;
             color: white; }
+      body .panelWrapper .subPanel .showMenu {
+        position: absolute;
+        right: 0.5rem;
+        top: 0.4rem; }
       body .panelWrapper .subPanel:before {
         height: 100%;
         content: '';
         display: block;
-        border-right: #b3e1e2 5px solid;
+        border-right: #b3e1e2 4.2rem solid;
         position: absolute;
         right: 0px;
         top: 0; }
+    @media (min-width: 1200px) {
+      body .panelWrapper .subPanel {
+        position: relative;
+        display: block;
+        width: 25%;
+        background: #ccc;
+        float: left;
+        border-bottom: #b3e1e2 0 solid; }
+        body .panelWrapper .subPanel .callToAction {
+          display: none;
+          float: left; }
+        body .panelWrapper .subPanel .company {
+          display: none;
+          color: #052B48;
+          _text-shadow: -1px -1px 0 #052B48, 1px -1px 0 #052B48, -1px 1px 0 #052B48, 1px 1px 0 #052B48;
+          font-weight: bold;
+          margin: -1.5rem 1.5rem 0;
+          text-align: left;
+          position: relative;
+          text-transform: uppercase;
+          left: 0px;
+          font-size: 35px; }
+          body .panelWrapper .subPanel .company b {
+            font-size: 110%; }
+          body .panelWrapper .subPanel .company span {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 80%; }
+            body .panelWrapper .subPanel .company span b {
+              font-size: inherit; }
+        body .panelWrapper .subPanel .logo {
+          margin: 5%;
+          width: 90%;
+          height: auto; }
+          body .panelWrapper .subPanel .logo a {
+            position: relative;
+            display: block;
+            margin-left: -10px; }
+            body .panelWrapper .subPanel .logo a img {
+              width: 100%;
+              height: auto; }
+            body .panelWrapper .subPanel .logo a span {
+              margin-left: -10000px; }
+        body .panelWrapper .subPanel .contact {
+          margin: 1.5rem;
+          width: 90%;
+          height: 200px;
+          padding-top: 4.5rem;
+          color: #052B48;
+          font-weight: bold;
+          font-size: 20px;
+          left: 0;
+          text-transform: uppercase; }
+          body .panelWrapper .subPanel .contact a {
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            -moz-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+            -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+            box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+            padding: 5px 60px;
+            margin: 1.5rem 0;
+            background: white;
+            border: 1px solid #052B48;
+            color: #052B48;
+            opacity: 1;
+            font-size: 120%;
+            position: relative;
+            left: 0;
+            top: 0; }
+            body .panelWrapper .subPanel .contact a:hover {
+              background: #b3e1e2;
+              color: white; }
+        body .panelWrapper .subPanel .showMenu {
+          display: none; }
+        body .panelWrapper .subPanel:before {
+          height: 100%;
+          content: '';
+          display: block;
+          border-right: #b3e1e2 5px solid;
+          position: absolute;
+          right: 0px;
+          top: 0; } }
     body .panelWrapper .mainPanel {
-      width: 900px;
+      width: 100%;
+      margin-top: 4rem;
       float: left;
       min-height: 100%;
       height: auto;
-      -moz-box-shadow: -300px 0 0 0 #ccc;
-      -webkit-box-shadow: -300px 0 0 0 #ccc;
-      box-shadow: -300px 0 0 0 #ccc; }
+      -moz-box-shadow: -25% 0 0 0 #ccc;
+      -webkit-box-shadow: -25% 0 0 0 #ccc;
+      box-shadow: -25% 0 0 0 #ccc; }
       body .panelWrapper .mainPanel .line {
         min-height: 100%;
         height: auto;
@@ -197,22 +309,29 @@ body {
         box-shadow: -5px 0 0 0 #b3e1e2; }
         body .panelWrapper .mainPanel .line .menu {
           width: 100%;
-          padding: 20px 0 0 20px;
-          background: white; }
+          font-size: 1rem;
+          padding: 0 0 1.5rem;
+          background: #b3e1e2;
+          display: none;
+          position: fixed;
+          z-index: 70; }
           body .panelWrapper .mainPanel .line .menu a {
             -webkit-border-radius: 10px;
             -moz-border-radius: 10px;
             border-radius: 10px;
             color: #052B48;
-            margin: 10px 39px 10px 0;
-            font-size: 19px;
-            padding: 8px;
+            padding: 0.5rem 0;
+            width: 7.5rem;
             text-decoration: none;
-            -webkit-transition: all 0.3s ease-in-out;
-            -moz-transition: all 0.3s ease-in-out;
-            -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-            font-weight: bold; }
+            font-weight: bold;
+            float: left;
+            background: white;
+            text-align: center;
+            border: 1px solid #052B48;
+            margin: 1.5rem 0 0 1.5rem; }
+            body .panelWrapper .mainPanel .line .menu a:nth-child(even) {
+              margin: 1.5rem 1.5rem 0 0;
+              float: right; }
             body .panelWrapper .mainPanel .line .menu a:hover {
               -moz-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
               -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
@@ -222,8 +341,8 @@ body {
             body .panelWrapper .mainPanel .line .menu a.active {
               color: #0f80d7; }
         body .panelWrapper .mainPanel .line .content {
-          padding: 20px;
-          line-height: 30px;
+          padding: 1.5rem;
+          line-height: 2rem;
           height: auto;
           position: relative; }
           body .panelWrapper .mainPanel .line .content a {
@@ -240,18 +359,17 @@ body {
               color: #299af0; }
           body .panelWrapper .mainPanel .line .content hr {
             border: 0;
-            border-top: 2px solid #b3e1e2; }
+            border-top: 0.2rem solid #b3e1e2; }
           body .panelWrapper .mainPanel .line .content h3 {
             font-size: 120%;
             position: relative; }
             body .panelWrapper .mainPanel .line .content h3 .bookNow {
-              margin: 5px;
-              position: absolute;
+              margin: 0.5rem;
               right: 0;
               bottom: 0;
               color: #052B48;
               font-weight: bold;
-              font-size: 12px;
+              font-size: 1.2rem;
               text-transform: uppercase; }
               body .panelWrapper .mainPanel .line .content h3 .bookNow a {
                 -webkit-transition: all 0.2s ease-in-out;
@@ -265,7 +383,7 @@ body {
                 -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
                 box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
                 text-decoration: none;
-                padding: 5px;
+                padding: 0.5rem;
                 background: white;
                 border: 1px solid #052B48;
                 color: #052B48;
@@ -274,26 +392,24 @@ body {
                   background: #b3e1e2;
                   color: white; }
           body .panelWrapper .mainPanel .line .content ul li {
-            margin-left: 20px; }
+            margin-left: 1.5rem; }
           body .panelWrapper .mainPanel .line .content .map {
-            position: absolute;
-            right: 20px;
-            top: 430px; }
+            position: relative;
+            top: -15rem; }
           body .panelWrapper .mainPanel .line .content .column {
             display: inline-table;
-            width: 47%;
-            margin: 0 1%; }
+            width: 100%; }
           body .panelWrapper .mainPanel .line .content .image {
-            -webkit-border-radius: 20px;
-            -moz-border-radius: 20px;
-            border-radius: 20px;
+            -webkit-border-radius: 1.5rem;
+            -moz-border-radius: 1.5rem;
+            border-radius: 1.5rem;
             -moz-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
             -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
             box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
             overflow: hidden;
             height: auto;
             width: 30%;
-            margin: 20px 0;
+            margin: 1.5rem 0;
             position: relative; }
             body .panelWrapper .mainPanel .line .content .image:after {
               display: block;
@@ -309,14 +425,13 @@ body {
               background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0), #052B48);
               background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #052B48); }
             body .panelWrapper .mainPanel .line .content .image.profile {
-              width: 30%;
-              float: right;
-              margin-left: 20px; }
+              width: 50%;
+              float: left; }
             body .panelWrapper .mainPanel .line .content .image.large {
               width: 100%; }
             body .panelWrapper .mainPanel .line .content .image.map {
-              width: 520px;
-              height: 400px; }
+              width: 100%;
+              height: 40rem; }
               body .panelWrapper .mainPanel .line .content .image.map:after {
                 display: none; }
             body .panelWrapper .mainPanel .line .content .image img {
@@ -328,19 +443,18 @@ body {
               position: absolute;
               bottom: 2%;
               text-align: center;
-              font-size: 14px;
-              line-height: 16px;
+              line-height: 1.6rem;
               font-weight: bold;
               text-transform: uppercase;
               color: white;
               z-index: 2; }
           body .panelWrapper .mainPanel .line .content .heroPic {
-            padding-bottom: 20px;
+            padding-bottom: 1.5rem;
             width: 100%; }
             body .panelWrapper .mainPanel .line .content .heroPic img {
-              -webkit-border-radius: 20px;
-              -moz-border-radius: 20px;
-              border-radius: 20px;
+              -webkit-border-radius: 1.5rem;
+              -moz-border-radius: 1.5rem;
+              border-radius: 1.5rem;
               -moz-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
               -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
               box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
@@ -365,7 +479,7 @@ body {
             width: auto; }
             body .panelWrapper .mainPanel .line .content .socialPanel a {
               display: block;
-              margin: 10px;
+              margin: 0.75rem;
               -webkit-transition: all 0.2s ease-in-out;
               -moz-transition: all 0.2s ease-in-out;
               -o-transition: all 0.2s ease-in-out;
@@ -405,15 +519,15 @@ body {
     position: fixed;
     left: 0;
     bottom: 0;
-    padding-bottom: 10px;
-    padding-right: 10px;
+    padding-bottom: 0.75rem;
+    padding-right: 0.75rem;
     width: 100%;
     height: 50px;
     background: none; }
     body .footer a {
       display: block;
       background: #b3e1e2;
-      margin-right: 10px;
+      margin-right: 0.75rem;
       -webkit-transition: all 0.2s ease-in-out;
       -moz-transition: all 0.2s ease-in-out;
       -o-transition: all 0.2s ease-in-out;
@@ -443,3 +557,476 @@ body {
       body .footer a img {
         display: block;
         margin: 10px auto; }
+
+/* Larger than mobile */
+/* Larger than phablet */
+/* Larger than tablet */
+/* Larger than desktop */
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+  body {
+    font-family: 'PT Serif', serif;
+    font-size: 62.5%; }
+    body .panelWrapper {
+      display: block;
+      margin: 0 auto;
+      width: 1200px;
+      font-size: 1.4rem;
+      /* Larger than mobile */
+      /* Larger than phablet */
+      /* Larger than tablet */
+      /* Larger than desktop */
+      /* Larger than Desktop HD */ }
+      body .panelWrapper .subPanel {
+        position: fixed;
+        display: block;
+        width: 1200px;
+        height: 4rem;
+        background: #ccc;
+        float: left;
+        z-index: 80;
+        border-bottom: #b3e1e2 0.2rem solid; }
+        body .panelWrapper .subPanel .callToAction {
+          display: none;
+          float: left; }
+        body .panelWrapper .subPanel #mc_embed_signup {
+          display: none; }
+        body .panelWrapper .subPanel .company {
+          display: none;
+          color: #052B48;
+          _text-shadow: -1px -1px 0 #052B48, 1px -1px 0 #052B48, -1px 1px 0 #052B48, 1px 1px 0 #052B48;
+          font-weight: bold;
+          margin: -1.5rem 1.5rem 0;
+          text-align: left;
+          position: relative;
+          text-transform: uppercase;
+          left: 0px;
+          font-size: 0.2rem; }
+          body .panelWrapper .subPanel .company b {
+            font-size: 110%; }
+          body .panelWrapper .subPanel .company span {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 80%; }
+            body .panelWrapper .subPanel .company span b {
+              font-size: inherit; }
+        body .panelWrapper .subPanel .logo {
+          width: auto;
+          height: 100%;
+          float: left; }
+          body .panelWrapper .subPanel .logo a {
+            position: relative;
+            display: block;
+            left: 0.3rem;
+            top: 0.3rem; }
+            body .panelWrapper .subPanel .logo a img {
+              width: auto;
+              height: 80%; }
+            body .panelWrapper .subPanel .logo a span {
+              position: absolute;
+              margin-left: -10000px; }
+        body .panelWrapper .subPanel .contact {
+          margin: 0;
+          position: relative;
+          float: left;
+          left: 1rem;
+          top: -1.7rem;
+          width: auto;
+          height: 1rem;
+          padding-top: 0;
+          color: #052B48;
+          font-weight: bold;
+          font-size: 0.7rem; }
+          body .panelWrapper .subPanel .contact a {
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            -moz-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+            -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+            box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+            padding: 0.1rem 0.5rem;
+            margin: 1.5rem 0;
+            background: white;
+            position: relative;
+            left: 5.2rem;
+            top: 3rem;
+            border: 1px solid #052B48;
+            color: #052B48;
+            opacity: 1;
+            font-size: 150%; }
+            body .panelWrapper .subPanel .contact a:hover {
+              background: #b3e1e2;
+              color: white; }
+        body .panelWrapper .subPanel .showMenu {
+          position: absolute;
+          right: 0.5rem;
+          top: 0.4rem; }
+        body .panelWrapper .subPanel:before {
+          height: 100%;
+          content: '';
+          display: block;
+          border-right: #b3e1e2 4.2rem solid;
+          position: absolute;
+          right: 0px;
+          top: 0; } }
+    @media (min-width: 1200px) and (min-width: 1200px) {
+      body .panelWrapper .subPanel {
+        position: relative;
+        display: block;
+        width: 300px;
+        background: #ccc;
+        float: left;
+        border-bottom: #b3e1e2 0 solid; }
+        body .panelWrapper .subPanel .callToAction {
+          display: none;
+          float: left; }
+        body .panelWrapper .subPanel .company {
+          display: none;
+          color: #052B48;
+          _text-shadow: -1px -1px 0 #052B48, 1px -1px 0 #052B48, -1px 1px 0 #052B48, 1px 1px 0 #052B48;
+          font-weight: bold;
+          margin: -1.5rem 1.5rem 0;
+          text-align: left;
+          position: relative;
+          text-transform: uppercase;
+          left: 0px;
+          font-size: 35px; }
+          body .panelWrapper .subPanel .company b {
+            font-size: 110%; }
+          body .panelWrapper .subPanel .company span {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 80%; }
+            body .panelWrapper .subPanel .company span b {
+              font-size: inherit; }
+        body .panelWrapper .subPanel .logo {
+          margin: 5%;
+          width: 90%;
+          height: auto; }
+          body .panelWrapper .subPanel .logo a {
+            position: relative;
+            display: block;
+            margin-left: -10px; }
+            body .panelWrapper .subPanel .logo a img {
+              width: 100%;
+              height: auto; }
+            body .panelWrapper .subPanel .logo a span {
+              margin-left: -10000px; }
+        body .panelWrapper .subPanel .contact {
+          margin: 1.5rem;
+          width: 90%;
+          height: 200px;
+          padding-top: 4.5rem;
+          color: #052B48;
+          font-weight: bold;
+          font-size: 20px;
+          left: 0;
+          text-transform: uppercase; }
+          body .panelWrapper .subPanel .contact a {
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            -moz-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+            -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+            box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+            padding: 5px 60px;
+            margin: 1.5rem 0;
+            background: white;
+            border: 1px solid #052B48;
+            color: #052B48;
+            opacity: 1;
+            font-size: 120%;
+            position: relative;
+            left: 0;
+            top: 0; }
+            body .panelWrapper .subPanel .contact a:hover {
+              background: #b3e1e2;
+              color: white; }
+        body .panelWrapper .subPanel .showMenu {
+          display: none; }
+        body .panelWrapper .subPanel:before {
+          height: 100%;
+          content: '';
+          display: block;
+          border-right: #b3e1e2 5px solid;
+          position: absolute;
+          right: 0px;
+          top: 0; } }
+@media (min-width: 1200px) {
+      body .panelWrapper .mainPanel {
+        width: 900px;
+        float: left;
+        min-height: 100%;
+        height: auto;
+        -moz-box-shadow: -300px 0 0 0 #ccc;
+        -webkit-box-shadow: -300px 0 0 0 #ccc;
+        box-shadow: -300px 0 0 0 #ccc; }
+        body .panelWrapper .mainPanel .line {
+          min-height: 100%;
+          height: auto;
+          -moz-box-shadow: -5px 0 0 0 #b3e1e2;
+          -webkit-box-shadow: -5px 0 0 0 #b3e1e2;
+          box-shadow: -5px 0 0 0 #b3e1e2; }
+          body .panelWrapper .mainPanel .line .menu {
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+            width: 100%;
+            padding: 1.5rem 0 0 1.5rem;
+            background: white;
+            display: block; }
+            body .panelWrapper .mainPanel .line .menu a {
+              -webkit-border-radius: 10px;
+              -moz-border-radius: 10px;
+              border-radius: 10px;
+              color: #052B48;
+              margin: 0.75rem 39px 0.75rem 0;
+              font-size: 19px;
+              padding: 8px;
+              text-decoration: none;
+              -webkit-transition: all 0.3s ease-in-out;
+              -moz-transition: all 0.3s ease-in-out;
+              -o-transition: all 0.3s ease-in-out;
+              transition: all 0.3s ease-in-out;
+              font-weight: bold; }
+              body .panelWrapper .mainPanel .line .menu a:hover {
+                -moz-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+                -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+                box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+                color: white !important;
+                background-color: #b3e1e2; }
+              body .panelWrapper .mainPanel .line .menu a.active {
+                color: #0f80d7; }
+          body .panelWrapper .mainPanel .line .content {
+            padding: 1.5rem;
+            line-height: 30px;
+            height: auto;
+            position: relative; }
+            body .panelWrapper .mainPanel .line .content a {
+              color: #0c64a7;
+              -webkit-transition: all 0.3s ease-in-out;
+              -moz-transition: all 0.3s ease-in-out;
+              -o-transition: all 0.3s ease-in-out;
+              transition: all 0.3s ease-in-out;
+              text-decoration: none; }
+              body .panelWrapper .mainPanel .line .content a img.center {
+                position: relative;
+                left: 50%; }
+              body .panelWrapper .mainPanel .line .content a:hover {
+                color: #299af0; }
+            body .panelWrapper .mainPanel .line .content hr {
+              border: 0;
+              border-top: 2px solid #b3e1e2; }
+            body .panelWrapper .mainPanel .line .content h3 {
+              font-size: 120%;
+              position: relative; }
+              body .panelWrapper .mainPanel .line .content h3 .bookNow {
+                margin: 5px;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                color: #052B48;
+                font-weight: bold;
+                font-size: 12px;
+                text-transform: uppercase; }
+                body .panelWrapper .mainPanel .line .content h3 .bookNow a {
+                  -webkit-transition: all 0.2s ease-in-out;
+                  -moz-transition: all 0.2s ease-in-out;
+                  -o-transition: all 0.2s ease-in-out;
+                  transition: all 0.2s ease-in-out;
+                  -webkit-border-radius: 10px;
+                  -moz-border-radius: 10px;
+                  border-radius: 10px;
+                  -moz-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+                  -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+                  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+                  text-decoration: none;
+                  padding: 5px;
+                  background: white;
+                  border: 1px solid #052B48;
+                  color: #052B48;
+                  opacity: 1; }
+                  body .panelWrapper .mainPanel .line .content h3 .bookNow a:hover {
+                    background: #b3e1e2;
+                    color: white; }
+            body .panelWrapper .mainPanel .line .content ul li {
+              margin-left: 1.5rem; }
+            body .panelWrapper .mainPanel .line .content .map {
+              position: absolute;
+              right: 1.5rem;
+              top: 430px; }
+            body .panelWrapper .mainPanel .line .content .column {
+              display: inline-table;
+              width: 47%;
+              margin: 0 1%; }
+            body .panelWrapper .mainPanel .line .content .image {
+              -webkit-border-radius: 1.5rem;
+              -moz-border-radius: 1.5rem;
+              border-radius: 1.5rem;
+              -moz-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+              -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+              box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+              overflow: hidden;
+              height: auto;
+              width: 30%;
+              margin: 1.5rem 0;
+              position: relative; }
+              body .panelWrapper .mainPanel .line .content .image:after {
+                display: block;
+                width: 100%;
+                height: 20%;
+                position: absolute;
+                bottom: 0;
+                opacity: 0.6;
+                left: 0;
+                content: ' ';
+                background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), #052B48);
+                background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), #052B48);
+                background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0), #052B48);
+                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #052B48); }
+              body .panelWrapper .mainPanel .line .content .image.profile {
+                width: 30%;
+                float: right;
+                margin-left: 1.5rem; }
+              body .panelWrapper .mainPanel .line .content .image.large {
+                width: 100%; }
+              body .panelWrapper .mainPanel .line .content .image.map {
+                width: 520px;
+                height: 400px; }
+                body .panelWrapper .mainPanel .line .content .image.map:after {
+                  display: none; }
+              body .panelWrapper .mainPanel .line .content .image img {
+                height: auto;
+                width: 100%; }
+              body .panelWrapper .mainPanel .line .content .image span {
+                display: block;
+                width: 100%;
+                position: absolute;
+                bottom: 2%;
+                text-align: center;
+                font-size: 14px;
+                line-height: 16px;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: white;
+                z-index: 2; }
+            body .panelWrapper .mainPanel .line .content .heroPic {
+              padding-bottom: 1.5rem;
+              width: 100%; }
+              body .panelWrapper .mainPanel .line .content .heroPic img {
+                -webkit-border-radius: 1.5rem;
+                -moz-border-radius: 1.5rem;
+                border-radius: 1.5rem;
+                -moz-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+                -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+                box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+                margin: 10px auto 0;
+                width: 100%; }
+            body .panelWrapper .mainPanel .line .content .question {
+              color: #0c64a7;
+              cursor: pointer;
+              -webkit-transition: all 0.3s ease-in-out;
+              -moz-transition: all 0.3s ease-in-out;
+              -o-transition: all 0.3s ease-in-out;
+              transition: all 0.3s ease-in-out; }
+              body .panelWrapper .mainPanel .line .content .question:hover {
+                color: #299af0; }
+              body .panelWrapper .mainPanel .line .content .question .answer {
+                display: none;
+                color: #052B48; }
+                body .panelWrapper .mainPanel .line .content .question .answer:hover {
+                  color: #052B48; }
+            body .panelWrapper .mainPanel .line .content .socialPanel {
+              height: 50px;
+              width: auto; }
+              body .panelWrapper .mainPanel .line .content .socialPanel a {
+                display: block;
+                margin: 0.75rem;
+                -webkit-transition: all 0.2s ease-in-out;
+                -moz-transition: all 0.2s ease-in-out;
+                -o-transition: all 0.2s ease-in-out;
+                transition: all 0.2s ease-in-out;
+                -webkit-border-radius: 50px;
+                -moz-border-radius: 50px;
+                border-radius: 50px;
+                -moz-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+                -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+                box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+                position: relative;
+                opacity: 0.7;
+                cursor: pointer;
+                float: left;
+                height: 50px;
+                width: 50px; }
+                body .panelWrapper .mainPanel .line .content .socialPanel a:hover {
+                  opacity: 1; }
+                body .panelWrapper .mainPanel .line .content .socialPanel a.facebook {
+                  background: #46629D; }
+                  body .panelWrapper .mainPanel .line .content .socialPanel a.facebook img {
+                    width: 15px; }
+                body .panelWrapper .mainPanel .line .content .socialPanel a.twitter {
+                  background: #55ACEE; }
+                  body .panelWrapper .mainPanel .line .content .socialPanel a.twitter img {
+                    margin-top: 13px;
+                    width: 30px; }
+                body .panelWrapper .mainPanel .line .content .socialPanel a.instagram {
+                  background: #9b6954; }
+                  body .panelWrapper .mainPanel .line .content .socialPanel a.instagram img {
+                    margin-top: 10px;
+                    width: 30px; }
+                body .panelWrapper .mainPanel .line .content .socialPanel a img {
+                  display: block;
+                  margin: 10px auto; }
+    body .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      padding-bottom: 0.75rem;
+      padding-right: 0.75rem;
+      width: 100%;
+      height: 50px;
+      background: none; }
+      body .footer a {
+        display: block;
+        background: #b3e1e2;
+        margin-right: 0.75rem;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+        -moz-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+        box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+        position: relative;
+        opacity: 0.7;
+        cursor: pointer;
+        float: right;
+        height: 50px;
+        width: 50px; }
+        body .footer a:hover {
+          opacity: 1; }
+        body .footer a.facebook img {
+          width: 15px; }
+        body .footer a.twitter img {
+          margin-top: 13px;
+          width: 30px; }
+        body .footer a.instagram img {
+          margin-top: 10px;
+          width: 30px; }
+        body .footer a img {
+          display: block;
+          margin: 10px auto; } }
