@@ -11,23 +11,33 @@ ga('send', 'pageview');
 /*
 Menu
 */
+var toolTip = function() {
+	$(function() {
+		$('.question').on('click', function() {
+			var $this = $(this),
+			$answer   = $this.find('.answer');
+			if ($answer.is(':visible')) {
+				$answer.fadeOut('normal');
+			} else {
+				$answer.fadeIn('normal');
+			}
+		});
+		$('.showMenu').on('click', function() {
+			if ($('.menu').is(':visible')) {
+				$('.menu').slideUp();
+			} else {
+				$('.menu').slideDown();
+			}
+		});
+	});
+};
+
 if (typeof jQuery == 'undefined') {
 	var script    = document.createElement('script');
-	script.src    = 'http://code.jquery.com/jquery-1.9.0.min.js';
+	script.src    = 'http://code.jquery.com/jquery-2.1.4.min.js';
 	script.type   = 'text/javascript';
 	script.onload = function() {toolTip();};
 	document.getElementsByTagName('head')[0].appendChild(script);
 } else {
 	toolTip();
 }
-
-var toolTip = function() {
-$('.showMenu').on('click', function() {
-	if ($('.menu').is(':visible')) {
-		$('.menu').slideUp();
-	} else {
-		$('.menu').slideDown();
-	}
-});
-
-};

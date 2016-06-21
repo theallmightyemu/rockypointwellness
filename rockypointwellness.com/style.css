@@ -113,7 +113,6 @@ body {
       width: 100%;
       height: 4rem;
       background: #ccc;
-      float: left;
       z-index: 80;
       border-bottom: #b3e1e2 0.2rem solid; }
       body .panelWrapper .subPanel .callToAction {
@@ -161,7 +160,7 @@ body {
         float: left;
         left: 1rem;
         top: -1.7rem;
-        width: auto;
+        width: 50%;
         height: 1rem;
         padding-top: 0;
         color: #052B48;
@@ -183,7 +182,7 @@ body {
           margin: 1.5rem 0;
           background: white;
           position: relative;
-          left: 5.2rem;
+          left: 50%;
           top: 3rem;
           border: 1px solid #052B48;
           color: #052B48;
@@ -215,6 +214,8 @@ body {
         body .panelWrapper .subPanel .callToAction {
           display: none;
           float: left; }
+        body .panelWrapper .subPanel #mc_embed_signup {
+          display: block; }
         body .panelWrapper .subPanel .company {
           display: none;
           color: #052B48;
@@ -322,6 +323,7 @@ body {
             color: #052B48;
             padding: 0.5rem 0;
             width: 7.5rem;
+            min-width: 30%;
             text-decoration: none;
             font-weight: bold;
             float: left;
@@ -332,16 +334,10 @@ body {
             body .panelWrapper .mainPanel .line .menu a:nth-child(even) {
               margin: 1.5rem 1.5rem 0 0;
               float: right; }
-            body .panelWrapper .mainPanel .line .menu a:hover {
-              -moz-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
-              -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
-              box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
-              color: white !important;
-              background-color: #b3e1e2; }
             body .panelWrapper .mainPanel .line .menu a.active {
               color: #0f80d7; }
         body .panelWrapper .mainPanel .line .content {
-          padding: 1.5rem;
+          padding: 0.75rem;
           line-height: 2rem;
           height: auto;
           position: relative; }
@@ -458,7 +454,7 @@ body {
               -moz-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
               -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
               box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
-              margin: 10px auto 0;
+              margin: 0 auto 0;
               width: 100%; }
           body .panelWrapper .mainPanel .line .content .question {
             color: #0c64a7;
@@ -561,6 +557,9 @@ body {
 /* Larger than mobile */
 /* Larger than phablet */
 /* Larger than tablet */
+@media (min-width: 750px) {
+  .content {
+    padding: 1.125rem !important; } }
 /* Larger than desktop */
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {
@@ -571,7 +570,7 @@ body {
       display: block;
       margin: 0 auto;
       width: 1200px;
-      font-size: 1.4rem;
+      font-size: 1rem;
       /* Larger than mobile */
       /* Larger than phablet */
       /* Larger than tablet */
@@ -583,7 +582,6 @@ body {
         width: 1200px;
         height: 4rem;
         background: #ccc;
-        float: left;
         z-index: 80;
         border-bottom: #b3e1e2 0.2rem solid; }
         body .panelWrapper .subPanel .callToAction {
@@ -631,7 +629,7 @@ body {
           float: left;
           left: 1rem;
           top: -1.7rem;
-          width: auto;
+          width: 50%;
           height: 1rem;
           padding-top: 0;
           color: #052B48;
@@ -653,7 +651,7 @@ body {
             margin: 1.5rem 0;
             background: white;
             position: relative;
-            left: 5.2rem;
+            left: 50%;
             top: 3rem;
             border: 1px solid #052B48;
             color: #052B48;
@@ -685,6 +683,8 @@ body {
         body .panelWrapper .subPanel .callToAction {
           display: none;
           float: left; }
+        body .panelWrapper .subPanel #mc_embed_signup {
+          display: block; }
         body .panelWrapper .subPanel .company {
           display: none;
           color: #052B48;
@@ -766,6 +766,7 @@ body {
       body .panelWrapper .mainPanel {
         width: 900px;
         float: left;
+        margin-top: 0;
         min-height: 100%;
         height: auto;
         -moz-box-shadow: -300px 0 0 0 #ccc;
@@ -785,21 +786,28 @@ body {
             width: 100%;
             padding: 1.5rem 0 0 1.5rem;
             background: white;
-            display: block; }
+            display: block;
+            position: relative; }
             body .panelWrapper .mainPanel .line .menu a {
               -webkit-border-radius: 10px;
               -moz-border-radius: 10px;
               border-radius: 10px;
-              color: #052B48;
-              margin: 0.75rem 39px 0.75rem 0;
-              font-size: 19px;
-              padding: 8px;
-              text-decoration: none;
               -webkit-transition: all 0.3s ease-in-out;
               -moz-transition: all 0.3s ease-in-out;
               -o-transition: all 0.3s ease-in-out;
               transition: all 0.3s ease-in-out;
-              font-weight: bold; }
+              color: #052B48;
+              margin: 0.75rem 2rem 0.75rem 0;
+              font-size: 1.2rem;
+              padding: 0.8rem;
+              text-decoration: none;
+              font-weight: bold;
+              width: auto;
+              float: none;
+              border: none; }
+              body .panelWrapper .mainPanel .line .menu a:nth-child(even) {
+                margin: 0.75rem 1rem 0.75rem 0;
+                float: none; }
               body .panelWrapper .mainPanel .line .menu a:hover {
                 -moz-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
                 -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
@@ -865,7 +873,8 @@ body {
             body .panelWrapper .mainPanel .line .content .map {
               position: absolute;
               right: 1.5rem;
-              top: 430px; }
+              top: 27rem;
+              width: 25rem; }
             body .panelWrapper .mainPanel .line .content .column {
               display: inline-table;
               width: 47%;
