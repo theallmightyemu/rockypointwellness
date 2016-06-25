@@ -566,8 +566,8 @@ body {
       display: inline-table;
       width: 47%;
       margin: 0 1%;
-      float: left; }
-      body .panelWrapper .mainPanel .line .content .column:nth-child(odd) {
+      float: none; }
+      body .panelWrapper .mainPanel .line .content .column:nth-child(even) {
         float: right; } }
 /* Larger than desktop */
 /* Larger than Desktop HD */
@@ -888,8 +888,8 @@ body {
               display: inline-table;
               width: 47%;
               margin: 0 1%;
-              float: left; }
-              body .panelWrapper .mainPanel .line .content .column:nth-child(odd) {
+              float: none; }
+              body .panelWrapper .mainPanel .line .content .column:nth-child(even) {
                 float: right; }
             body .panelWrapper .mainPanel .line .content .image {
               -webkit-border-radius: 1.5rem;

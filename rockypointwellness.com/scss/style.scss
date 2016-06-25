@@ -297,9 +297,9 @@ body {
 						display:inline-table;
 						width: 47%;
 						margin: 0 1%;
-						float: left;
+						float: none;
 
-						&:nth-child(odd) {
+						&:nth-child(even) {
 							float: right;
 						}
 					}
@@ -448,9 +448,9 @@ body {
 						display:inline-table;
 						width: 47%;
 						margin: 0 1%;
-						float: left;
+						float: none;
 
-						&:nth-child(odd) {
+						&:nth-child(even) {
 							float: right;
 						}
 					}
