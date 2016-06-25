@@ -395,6 +395,8 @@ body {
           body .panelWrapper .mainPanel .line .content .column {
             display: inline-table;
             width: 100%; }
+            body .panelWrapper .mainPanel .line .content .column:nth-child(odd) {
+              float: none; }
           body .panelWrapper .mainPanel .line .content .image {
             -webkit-border-radius: 1.5rem;
             -moz-border-radius: 1.5rem;
@@ -558,8 +560,15 @@ body {
 /* Larger than phablet */
 /* Larger than tablet */
 @media (min-width: 750px) {
-  .content {
-    padding: 1.125rem !important; } }
+  body .panelWrapper .mainPanel .line .content {
+    padding: 1.125rem; }
+    body .panelWrapper .mainPanel .line .content .column {
+      display: inline-table;
+      width: 47%;
+      margin: 0 1%;
+      float: left; }
+      body .panelWrapper .mainPanel .line .content .column:nth-child(odd) {
+        float: right; } }
 /* Larger than desktop */
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {
@@ -878,7 +887,10 @@ body {
             body .panelWrapper .mainPanel .line .content .column {
               display: inline-table;
               width: 47%;
-              margin: 0 1%; }
+              margin: 0 1%;
+              float: left; }
+              body .panelWrapper .mainPanel .line .content .column:nth-child(odd) {
+                float: right; }
             body .panelWrapper .mainPanel .line .content .image {
               -webkit-border-radius: 1.5rem;
               -moz-border-radius: 1.5rem;
