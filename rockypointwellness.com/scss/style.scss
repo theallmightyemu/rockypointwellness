@@ -13,7 +13,7 @@ body {
 	.panelWrapper {
 		display: block;
    		margin: 0 auto;
-   		font-size: 1.2rem;
+   		font-size: 1.1rem;
 		$panelWidth: 100%;
 		width: $panelWidth;
 
@@ -66,7 +66,7 @@ body {
 				}
 				.content {
 					padding: $spacing*0.5;
-					line-height: 2rem;
+					line-height: 1.7rem;
 					height: auto;
 					position: relative;
 
@@ -89,16 +89,16 @@ body {
 						border-top: 0.2rem solid $accentColor;
 					}
 					h3 {
-						font-size: 120%;
 						position: relative;
 
 						.bookNow {
-							margin: 0.5rem;
+							margin: 0.5rem 0 1rem ;
 							right: 0;
 							bottom: 0;
 							color: $darkColor;
 							font-weight: bold;
-							font-size: 1.2rem;
+							display: block;
+							font-size: 0.9rem;
 							text-transform: uppercase;
 
 							a {
@@ -106,7 +106,7 @@ body {
 								@include rounded();
 								@include box-shadow();
 								text-decoration: none;
-								padding: 0.5rem;
+								padding: 0.3rem;
 								background: white;
 								border: 1px solid $darkColor;
 								color: $darkColor;
@@ -121,13 +121,23 @@ body {
 						}
 					}
 					ul {
+						list-style: none;
+						margin-left: $spacing/2;
+
 						li {
-							margin-left: $spacing;
+							padding-left: 1rem;
+							text-indent: -.7rem;
+							&:before {
+								content: "•";
+								color: $accentColor;
+								position: relative;
+								left: -0.5rem
+							}
 						}
 					}
 					.map {
 						position: relative;
-						top: -15rem;
+						top: -13rem;
 					}
 					.column {
 						display: inline-table;
@@ -144,7 +154,7 @@ body {
 						overflow: hidden;
 						height: auto;
 						width: 30%;
-						margin: $spacing 0;
+						margin: $spacing/2;
 						position: relative;
 
 						&:after {
@@ -162,8 +172,10 @@ body {
 						&.profile {
 							width: 50%;
 							float: left;
+							margin: 0 1rem 1rem 0;
 						}
 						&.large {
+							margin: $spacing/2 0;
 							width: 100%;
 						}
 						&.map {
@@ -193,7 +205,7 @@ body {
 						}
 					}
 					.heroPic {
-						padding-bottom: $spacing;
+						padding-bottom: $spacing/2;
 						width: 100%;
 
 						img {
@@ -288,11 +300,18 @@ body {
 @media (min-width: 750px) {
 body {
 	.panelWrapper {
+		font-size: 1.2rem;
 		.mainPanel {
 			.line {
 				.content {
 					padding: $spacing*0.75;
 
+					h3 {
+						.bookNow {
+							display: initial;
+							margin: 1rem ;
+						}
+					}
 					.column {
 						display:inline-table;
 						width: 47%;
@@ -302,6 +321,9 @@ body {
 						&:nth-child(even) {
 							float: right;
 						}
+					}
+					.heroPic {
+						padding-bottom: $spacing/2;
 					}
 				}
 			}
@@ -316,12 +338,7 @@ body {
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {
 body {
-	font-family: 'PT Serif', serif;
-	font-size: 62.5%;
-
 	.panelWrapper {
-		display: block;
-   		margin: 0 auto;
    		$panelWidth: 1200px;
 		width: $panelWidth;
 		font-size: 1rem;
@@ -431,11 +448,6 @@ body {
 								}
 							}
 
-						}
-					}
-					ul {
-						li {
-							margin-left: $spacing;
 						}
 					}
 					.map {
