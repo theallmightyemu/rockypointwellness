@@ -405,8 +405,8 @@ body {
           body .panelWrapper .mainPanel .line .content .column {
             display: inline-table;
             width: 100%; }
-            body .panelWrapper .mainPanel .line .content .column:nth-child(odd) {
-              float: none; }
+            body .panelWrapper .mainPanel .line .content .column:last-child {
+              padding-bottom: 3rem; }
           body .panelWrapper .mainPanel .line .content .image {
             -webkit-border-radius: 1.5rem;
             -moz-border-radius: 1.5rem;
@@ -584,8 +584,6 @@ body {
         width: 47%;
         margin: 0 1%;
         float: none; }
-        body .panelWrapper .mainPanel .line .content .column:nth-child(even) {
-          float: right; }
       body .panelWrapper .mainPanel .line .content .heroPic {
         padding-bottom: 0.75rem; } }
 /* Larger than desktop */
@@ -901,8 +899,6 @@ body {
             width: 47%;
             margin: 0 1%;
             float: none; }
-            body .panelWrapper .mainPanel .line .content .column:nth-child(even) {
-              float: right; }
           body .panelWrapper .mainPanel .line .content .image {
             -webkit-border-radius: 1.5rem;
             -moz-border-radius: 1.5rem;

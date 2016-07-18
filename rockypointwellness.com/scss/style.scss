@@ -143,8 +143,8 @@ body {
 						display: inline-table;
 						width: 100%;
 
-						&:nth-child(odd) {
-							float: none;
+						&:last-child {
+							padding-bottom: 3rem;
 						}
 					}
 					.image {
@@ -317,10 +317,6 @@ body {
 						width: 47%;
 						margin: 0 1%;
 						float: none;
-
-						&:nth-child(even) {
-							float: right;
-						}
 					}
 					.heroPic {
 						padding-bottom: $spacing/2;
@@ -461,10 +457,6 @@ body {
 						width: 47%;
 						margin: 0 1%;
 						float: none;
-
-						&:nth-child(even) {
-							float: right;
-						}
 					}
 					.image {
 						@include rounded($spacing);
