@@ -427,7 +427,6 @@ body {
               bottom: 0;
               opacity: 0.6;
               left: 0;
-              content: ' ';
               background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), #052B48);
               background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), #052B48);
               background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0), #052B48);
